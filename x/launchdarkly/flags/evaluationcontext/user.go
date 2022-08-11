@@ -84,7 +84,7 @@ func NewAnonymousUserWithSubdomain(key string, subdomain string) User {
 	return User{
 		key: key,
 		ldUser: lduser.NewUserBuilder(key).
-			Anonymous(true).
+			// Anonymous(true).
 			Custom(
 				userAttributeSubdomain,
 				ldvalue.String(subdomain),
